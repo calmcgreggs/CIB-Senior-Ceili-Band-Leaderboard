@@ -1,0 +1,14 @@
+{
+  "bands": [
+    {
+      "Name": "St Roch's Ceili Band",
+      "Points": [11, -1, -1, -1, 11],
+      "Style": "bg-red-600 text-white"
+    },
+    {
+      "Name": "St James The Great Ceili Band",
+      "Points": [9, -1, -1, -1, 9],
+      "Style": "bg-green-600 text-white"
+    }
+  ]
+}

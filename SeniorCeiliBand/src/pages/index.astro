@@ -1,0 +1,10 @@
+---
+import Leaderboard from "../components/leaderboard";
+import Layout from "../layout/layout.astro";
+---
+
+<Layout>
+  <div class="bg-gray-300 h-screen overflow-hidden">
+    <Leaderboard client:load />
+  </div>
+</Layout>
