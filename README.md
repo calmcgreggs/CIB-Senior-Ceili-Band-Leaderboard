@@ -2,7 +2,9 @@
 
 ## Getting Started
 
-Install Node.JS, and then run "npm install" inside each subfolder in order to download the required dependencies.
+Download the respository remotely or using git clone and unzip if needed.
+
+Install Node.JS, and then run "npm install" inside each subfolder of the package in order to download the required dependencies.
 
 ## Usage
 
