@@ -114,22 +114,22 @@ const Leaderboard = () => {
   //     console.log(results);
   //   }, []);
   return (
-    <div className="w-full whitespace-nowrap text-2xl">
+    <div className="w-full whitespace-nowrap text-6xl text-black font-light">
       <div className="flex flex-row my-10 mx-20">
-        <div className="p-10 rounded-xl px-40 w-[31vw] text-center font-extrabold">
+        <div className=" rounded-xl px-40 w-[31vw] text-center font-extrabold mr-4">
           Band Name
         </div>
         {results.length > 0
           ? results[0].Points.map((p, i) => {
               return (
-                <div className=" px-5 rounded-xl text-center flex ml-10 font-extrabold">
-                  <h1 className="m-auto w-[5vw]">Adjudicator {i + 1}</h1>
+                <div className=" px-5 rounded-xl text-center flex ml-[6vw] font-extrabold">
+                  <h1 className="m-auto w-[1vw]">{i + 1}</h1>
                 </div>
               );
             })
           : ""}
-        <div className=" px-5 rounded-xl text-center flex ml-10 font-extrabold">
-          <h1 className="m-auto w-[10vw]">Total Points</h1>
+        <div className=" px-5 rounded-xl text-center flex ml-20 font-extrabold">
+          <h1 className="m-auto w-[10vw]">Total</h1>
         </div>
       </div>
       <FlipMove
@@ -140,11 +140,14 @@ const Leaderboard = () => {
       >
         {results.map((e, i) => {
           return (
-            <div className="flex flex-row w-full mx-10 h-10 my-5" key={i + 1}>
+            <div
+              className="flex flex-row w-full mx-10 h-10 my-10 text-5xl"
+              key={i + 1}
+            >
               <div
                 className={
                   (e.Style ? e.Style : "bg-white text-black") +
-                  " px-5 rounded-xl text-center flex "
+                  " px-5 rounded-xl text-center flex h-fit mr-10 py-1"
                 }
               >
                 <h1 className="m-auto w-[32vw]">{e.Name}</h1>
@@ -154,7 +157,7 @@ const Leaderboard = () => {
                   <div
                     className={
                       (e.Style ? e.Style : "text-black bg-white") +
-                      " px-5 rounded-xl text-center flex ml-10"
+                      " px-5 rounded-xl text-center flex ml-10 h-fit py-1"
                     }
                     key={ind}
                   >
@@ -167,7 +170,7 @@ const Leaderboard = () => {
               <div
                 className={
                   (e.Style ? e.Style : "text-black bg-white") +
-                  " px-5 rounded-xl text-center flex ml-10"
+                  " px-5 rounded-xl text-center flex ml-10 h-fit py-1"
                 }
               >
                 <h1 className="m-auto w-[10vw]">

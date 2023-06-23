@@ -4,11 +4,11 @@
     { "Name": "St Roch's", "Style": "bg-red-600 text-white" },
     { "Name": "St James the Great", "Style": "bg-green-200" },
     { "Name": "Oilean Mor", "Style": "bg-white" },
-    { "Name": "Meitheal Cheoil", "Style": "bg-red-400" },
+    { "Name": "Meitheal Cheoil", "Style": "bg-red-600 text-white" },
     {
       "Name": "Leeds Ceili Band",
       "Style": "bg-green-500 text-white"
     },
-    { "Name": "Trasna na dTonnta", "Style": "bg-green-500" }
+    { "Name": "Trasna na dTonnta", "Style": "bg-green-500 bg-white" }
   ]
 }

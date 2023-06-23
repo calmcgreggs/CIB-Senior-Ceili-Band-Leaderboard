@@ -119,6 +119,29 @@ const Results = () => {
 
   return (
     <div className="flex flex-row">
+      <button
+        className="absolute w-screen bg-red-600 bottom-0 text-white"
+        onClick={async () => {
+          if (db) {
+            const data = await getDocs(collection(db, "results"));
+            const re: bandresults[] = [];
+            data.forEach((each) => {
+              re.push({
+                Name: each.data()["Name"],
+                Points: each.data()["Points"],
+                Style: each.data()["Style"],
+              } as bandresults);
+            });
+            re.forEach((each) => {
+              deleteBand(each);
+            });
+          }
+
+          window.location.reload();
+        }}
+      >
+        Delete All Bands
+      </button>
       {locked ? (
         <div className="w-screen">
           <div className="">
@@ -147,7 +170,7 @@ const Results = () => {
                   return (
                     <div
                       key={i}
-                      className="flex flex-row my-10 [&>input]:ml-20 [&>label]:ml-32"
+                      className="flex flex-row mt-10 [&>input]:ml-20 [&>label]:ml-32"
                     >
                       <label htmlFor="name" className="block mb-1 ml-1">
                         Name
@@ -283,14 +306,14 @@ const Results = () => {
               ? results.map((each, bandid) => {
                   return (
                     <div
-                      className="flex flex-row mt-20 justify-center"
+                      className="flex flex-row mt-10 justify-center"
                       key={bandid}
                     >
                       <h1 className="my-auto mr-20 w-[10vw]">{each.Name}</h1>
                       {each.Points.map((points, i) => {
                         return (
                           <input
-                            type="number"
+                            type="text"
                             value={points == -1 ? "" : points}
                             className="text-black mr-5"
                             onChange={(e) => {
