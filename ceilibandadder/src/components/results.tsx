@@ -302,8 +302,14 @@ const Results = () => {
           </h2>
 
           <div>
-            {results.length > 1
-              ? results.map((each, bandid) => {
+            {results.length > 1 ? (
+              <div>
+                <div className="flex flex-row mt-10 justify-center ml-[11vw] gap-20 [&>*]:w-[10vw]">
+                  {new Array(adj).fill(0).map((each, i) => {
+                    return <h1>Adjudicator {i + 1}</h1>;
+                  })}
+                </div>
+                {results.map((each, bandid) => {
                   return (
                     <div
                       className="flex flex-row mt-10 justify-center"
@@ -343,8 +349,11 @@ const Results = () => {
                       })}
                     </div>
                   );
-                })
-              : ""}
+                })}
+              </div>
+            ) : (
+              ""
+            )}
           </div>
           <button
             className="bg-white text-black rounded-xl px-20 py-10 mt-20 mx-40"

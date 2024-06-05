@@ -114,7 +114,7 @@ const Leaderboard = () => {
   //     console.log(results);
   //   }, []);
   return (
-    <div className="w-full whitespace-nowrap text-6xl text-black font-light">
+    <div className="w-full whitespace-nowrap text-6xl text-black font-bold">
       <div className="flex flex-row my-10 mx-20">
         <div className=" rounded-xl px-40 w-[31vw] text-center font-extrabold mr-4">
           Band Name
