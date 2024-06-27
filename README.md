@@ -4,11 +4,13 @@
 
 Download the respository remotely or using git clone and unzip if needed.
 
-Install Node.JS, and then run "npm install" inside each subfolder of the package in order to download the required dependencies.
+Install Node.JS as well as Java.
+
+Navigate to the folder in a terminal and enter the command `./install.sh`
 
 ## Usage
 
-To start the program, run the two bat files in this folder. This will activate the emulator that allows for the local backend, as well as start both of the programs. Failing this, navigate to each subfolder in this directory and run the command in the terminal "npm run start"
+To start the program, navigate to the folder in a terminal and enter the command `./start.sh`
 
 ## Accessing the interfaces
 
